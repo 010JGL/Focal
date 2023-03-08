@@ -1,14 +1,8 @@
-// Write any loop (while or for) that prints out the contents of ingredients backwards:
+const input = process.argv[2];     // put an input with the node cmd
 
-/* for (i = ingredients.length -1 ;i >= 0; i--) { // Starts with the length -1(or prints undefined) then stops at 0 in reverse order
-  console.log(ingredients[i]);
-} */
-
-function reverseString(str) {
-  let newStr = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    
-  }
-  return newStr;
+if (input) {                        // if there is a num cmd, console.log the func
+  console.log(reverse(input));
 }
-console.log(reverseString());
+function reverse(original) {        // function to reverse the letters
+  return original.split('').reverse().join('');
+}
