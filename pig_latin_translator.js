@@ -1,20 +1,13 @@
-var originalWords = process.argv.slice(2);
-var pigLatinWords = [];
+let originalWords = process.argv.slice(2);     // access the data from terminal node
+let pigLatinWords = [];                         // empty array to push data in
 
-for (var i = 0; i < originalWords.length; i++) {
-    // console.log(originalWords[i]);
-  // console.log(translateToPigLatin(originalWords[i]));
-    // pour debug
-  pigLatinWords.push(translateToPigLatin(originalWords[i]));
+for (let i = 0; i < originalWords.length; i++) {   // loop thru all of the array
+  
+  pigLatinWords.push(translateToPigLatin(originalWords[i]));     // push the data from the func. (func the array[index])
 }
 
+const translateToPigLatin = function(word) {
+  
+  return word.slice(1, word.length) + word[0] + "ay";  // returns the word , with conditions
+};
 console.log(pigLatinWords.join(' '));
-
-function translateToPigLatin(word) {
-//  console.log("Word", word);        pour debugger
-// console.log("First letter", word[0]);
-//  console.log("Rest of word", word.slice(2, word.length)); 
-  
-  
-  return word.slice(1, word.length) + word[0] + "ay";
-}
