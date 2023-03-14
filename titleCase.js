@@ -1,4 +1,5 @@
-// Title case (or Capital Case) is a specific method of capitalizing the characters of every word in a sentence in order to make it usable as a title or headline.
+// Title case (or Capital Case) is a specific method of capitalizing the characters of every word in a sentence
+//   in order to make it usable as a title or headline.
 
 
 const titleCase = function(sentence) {
